@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0qNZN5vA8iQ=",
+  "dgSpecHash": "/EXCGkI8Xic=",
   "success": true,
   "projectFilePath": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\CruiseControl.csproj",
   "expectedPackageFiles": [
@@ -46,6 +46,7 @@
     "C:\\Users\\sydne\\.nuget\\packages\\microsoft.web.webview2\\1.0.2792.45\\microsoft.web.webview2.1.0.2792.45.nupkg.sha512",
     "C:\\Users\\sydne\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",
     "C:\\Users\\sydne\\.nuget\\packages\\microsoft.windowsappsdk\\1.6.240923002\\microsoft.windowsappsdk.1.6.240923002.nupkg.sha512",
+    "C:\\Users\\sydne\\.nuget\\packages\\system.net.http.json\\9.0.2\\system.net.http.json.9.0.2.nupkg.sha512",
     "C:\\Users\\sydne\\.nuget\\packages\\xamarin.android.glide\\4.16.0.6\\xamarin.android.glide.4.16.0.6.nupkg.sha512",
     "C:\\Users\\sydne\\.nuget\\packages\\xamarin.android.glide.annotations\\4.16.0.6\\xamarin.android.glide.annotations.4.16.0.6.nupkg.sha512",
     "C:\\Users\\sydne\\.nuget\\packages\\xamarin.android.glide.disklrucache\\4.16.0.6\\xamarin.android.glide.disklrucache.4.16.0.6.nupkg.sha512",
