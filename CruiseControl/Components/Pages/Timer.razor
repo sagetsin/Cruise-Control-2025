@@ -5,9 +5,8 @@
 
 <h1>Hi!</h1>
 
-
-
 <p>Elapsed Time: @FormatTime(elapsedMilliseconds)</p>
+<p>Points: @FormatPoints()</p>
 
 @if (isRunning)
 {
@@ -23,9 +22,11 @@ else
     private bool isRunning = false;
     private DateTime startTime;
     private long elapsedMilliseconds = 0;
+    private string loggedInUsername;
 
     protected override void OnInitialized()
     {
+        loggedInUsername = AccountStorage.GetCurrentLoggedInUsername();
         timer = new System.Timers.Timer(10);
         timer.Elapsed += OnTimerElapsed;
     }
@@ -38,7 +39,6 @@ else
             timer.Start();
             isRunning = true;
         }
-        
     }
 
     private void Stop()
@@ -46,36 +46,39 @@ else
         if (isRunning)
         {
             timer.Stop();
-            isRunning = false;
-            //elapsedMilliseconds += (long)(DateTime.Now - startTime).TotalMilliseconds;
             elapsedMilliseconds = 0;
+            isRunning = false;
+            InvokeAsync(StateHasChanged);
         }
     }
-    private void Reset()
-    {
-        timer.Stop();
-        elapsedMilliseconds = 0;
-        isRunning = false;
-        InvokeAsync(StateHasChanged);
-    }
-
     private void OnTimerElapsed(object sender, System.Timers.ElapsedEventArgs e)
     {
-        int pointDivisor = 5000;
+        int interval = 1000;
+        long pointCounter = 0;
 
+    
         if (isRunning)
         {
-            elapsedMilliseconds += (long)(DateTime.Now - startTime).TotalMilliseconds;
+            
+            long deltaMilliseconds = (long)(DateTime.Now - startTime).TotalMilliseconds; // Calculate the time since last tick
             startTime = DateTime.Now;
-            // add points to user every pointDivisor milliseconds
-            if (elapsedMilliseconds % pointDivisor == 0)
-            {
-                // add points to user
+            elapsedMilliseconds += deltaMilliseconds;
+            pointCounter += elapsedMilliseconds;
 
+            System.Console.WriteLine("Point Counter: " + pointCounter);
+
+            // add points to user every pointDivisor milliseconds
+            if (pointCounter >= interval)
+            {
+                System.Console.WriteLine("Adding points");
+                // add points to user
+                pointCounter -= interval; 
+                // get points and add two
+                int newPoints = AccountStorage.GetPoints(loggedInUsername) + 2;
+                AccountStorage.SetPoints(loggedInUsername, newPoints);
             }
             InvokeAsync(StateHasChanged);
         }
-        
     }
 
 	private string FormatTime(long elapsedMilliseconds)
@@ -83,6 +86,12 @@ else
 		TimeSpan timeSpan = TimeSpan.FromMilliseconds(elapsedMilliseconds);
 		return timeSpan.ToString(@"hh\:mm\:ss");
 	}
+
+    private string FormatPoints()
+    {
+        int points = AccountStorage.GetPoints(loggedInUsername);
+        return points.ToString();
+    }
 
     public void Dispose()
     {
