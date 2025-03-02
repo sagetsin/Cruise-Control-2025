@@ -12,8 +12,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName>ScopedCss</AssetTraitName>
       <AssetTraitValue>ApplicationBundle</AssetTraitValue>
-      <Fingerprint>vc8ydicsic</Fingerprint>
-      <Integrity>z9MqH6F2Kjp26C2ghKH1E/PqWaAkWFWjUBi9beAOTpE=</Integrity>
+      <Fingerprint>zifog8ehwq</Fingerprint>
+      <Integrity>m7QtIc74S8o9gXurS6nNtBoXjvLH8FAFUdDyld8gU0s=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CruiseControl.styles.css'))</OriginalItemSpec>

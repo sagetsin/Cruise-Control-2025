@@ -12,6 +12,7 @@ namespace CruiseControl
     {
         private string filePath;
         private string loggedInUsernameFilePath;
+        
 
         public AccountStorage(string filePath, string loggedInUsernameFilePath)
         {
@@ -92,6 +93,26 @@ namespace CruiseControl
         {
             public string Username { get; set; }
             public string Password { get; set; } // Store hashed password in production
+            public string PhotoPath { get; set; }
+        }
+
+        public void UpdatePhotoPath(string username, string photoPath)
+        {
+            List<Account> accounts = LoadAccounts();
+            Account account = accounts.FirstOrDefault(a => a.Username == username);
+
+            if (account != null)
+            {
+                account.PhotoPath = photoPath;
+                string jsonString = JsonSerializer.Serialize(accounts);
+                File.WriteAllText(filePath, jsonString);
+            }
+        }
+
+        public Account GetAccount(string username)
+        {
+            List<Account> accounts = LoadAccounts();
+            return accounts.FirstOrDefault(a => a.Username == username);
         }
 
         public string HashPassword(string password)

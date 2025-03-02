@@ -1,0 +1,78 @@
+@page "/profile"
+@inject AccountStorage AccountStorage
+@inject NavigationManager NavigationManager
+@using Microsoft.AspNetCore.Components.Forms
+
+
+<h3>My Profile</h3>
+
+@if (loggedInAccount == null)
+{
+    <p>You must be logged in to view your profile.</p>
+}
+else
+{
+    <p>Username: @loggedInAccount.Username</p>
+
+    @if (!string.IsNullOrEmpty(loggedInAccount.PhotoPath))
+    {
+        <img src="@loggedInAccount.PhotoPath" alt="Profile Photo" style="max-width: 200px;" />
+    }
+    else
+    {
+        <p>No profile photo uploaded.</p>
+    }
+
+    <InputFile OnChange="HandleFileChange" />
+
+    @if (!string.IsNullOrEmpty(uploadMessage))
+    {
+        <p>@uploadMessage</p>
+    }
+}
+
+@code {
+    private AccountStorage.Account loggedInAccount;
+    private string loggedInUsername;
+    private string uploadMessage;
+
+    protected override void OnInitialized()
+    {
+        loggedInUsername = AccountStorage.GetCurrentLoggedInUsername();
+        if (loggedInUsername != null)
+        {
+            loggedInAccount = AccountStorage.GetAccount(loggedInUsername);
+        }
+    }
+
+    private async Task HandleFileChange(InputFileChangeEventArgs e)
+    {
+        try
+        {
+            var file = e.File;
+            if (file != null)
+            {
+                var stream = file.OpenReadStream();
+                var memoryStream = new MemoryStream();
+                await stream.CopyToAsync(memoryStream);
+                var bytes = memoryStream.ToArray();
+
+                // Convert to base64 string
+                string base64String = $"data:{file.ContentType};base64,{Convert.ToBase64String(bytes)}";
+
+                AccountStorage.UpdatePhotoPath(loggedInUsername, base64String);
+                loggedInAccount.PhotoPath = base64String; // Update the displayed photo
+                uploadMessage = "Photo uploaded successfully!";
+                StateHasChanged(); 
+            }
+            else
+            {
+                uploadMessage = "Please select a photo to upload.";
+            }
+        }
+        catch (Exception ex)
+        {
+            uploadMessage = $"Error uploading photo: {ex.Message}";
+        }
+    }
+}

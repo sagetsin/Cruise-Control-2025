@@ -1,101 +1,103 @@
-.navbar-toggler[b-x8c1fjb3wv] {
-    appearance: none;
-    cursor: pointer;
-    width: 3.5rem;
-    height: 2.5rem;
-    color: white;
-    position: absolute;
-    top: 0.5rem;
-    right: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") no-repeat center/1.75rem rgba(255, 255, 255, 0.1);
+.sidebar[b-x8c1fjb3wv] {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hide by default */
+    background-color: #f0f0f0;
+    transition: left 0.3s ease;
 }
 
-    .navbar-toggler:checked[b-x8c1fjb3wv] {
-        background-color: rgba(255, 255, 255, 0.5);
-    }
+.sidebar.visible[b-x8c1fjb3wv] {
+    left: 0; /* Show when visible class is added */
+}
+
+.navbar-toggler[b-x8c1fjb3wv] {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-toggler-icon[b-x8c1fjb3wv] {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/002/292/406/small/hamburger-menu-line-icon-free-vector.jpg");
+}
 
 .top-row[b-x8c1fjb3wv] {
-    height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
+    background-color: #343a40; /* Dark background color */
+    color: white; /* White text */
+    padding: 0.5rem 1rem; /* Padding for spacing */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
 }
 
-.navbar-brand[b-x8c1fjb3wv] {
-    font-size: 1.1rem;
+.top-row .container-fluid[b-x8c1fjb3wv] {
+    display: flex;
+    justify-content: space-between; /* Space between elements */
+    width: 100%;
 }
 
-.bi[b-x8c1fjb3wv] {
-    display: inline-block;
-    position: relative;
-    width: 1.25rem;
-    height: 1.25rem;
-    margin-right: 0.75rem;
-    top: -1px;
-    background-size: cover;
+.top-row .navbar-brand[b-x8c1fjb3wv] {
+    font-size: 1.25rem; /* Adjust font size */
+    color: white; /* Ensure brand text is white */
+    text-decoration: none; /* Remove underline from link */
 }
 
-.bi-house-door-fill-nav-menu[b-x8c1fjb3wv] {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-house-door-fill' viewBox='0 0 16 16'%3E%3Cpath d='M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z'/%3E%3C/svg%3E");
+nav[b-x8c1fjb3wv] {
+    display: flex; /* Use flexbox for navigation items */
+    flex-direction: column; /* Stack navigation items vertically */
+    background-color: #f8f9fa; /* Light background color */
+    padding: 1rem 0; /* Padding for spacing */
 }
 
-.bi-plus-square-fill-nav-menu[b-x8c1fjb3wv] {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-plus-square-fill' viewBox='0 0 16 16'%3E%3Cpath d='M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z'/%3E%3C/svg%3E");
+nav .nav-item[b-x8c1fjb3wv] {
+    padding: 0.5rem 1rem; /* Padding for each nav item */
 }
 
-.bi-list-nested-nav-menu[b-x8c1fjb3wv] {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-list-nested' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z'/%3E%3C/svg%3E");
+nav .nav-link[b-x8c1fjb3wv] {
+    color: #333; /* Dark text color */
+    text-decoration: none; /* Remove underline */
+    display: flex; /* Use flexbox for icon and text */
+    align-items: center; /* Center items vertically */
 }
 
-.nav-item[b-x8c1fjb3wv] {
-    font-size: 0.9rem;
-    padding-bottom: 0.5rem;
+nav .nav-link:hover[b-x8c1fjb3wv] {
+    background-color: #e9ecef; /* Light background on hover */
+    color: #007bff; /* Change text color on hover */
 }
 
-    .nav-item:first-of-type[b-x8c1fjb3wv] {
-        padding-top: 1rem;
-    }
-
-    .nav-item:last-of-type[b-x8c1fjb3wv] {
-        padding-bottom: 1rem;
-    }
-
-    .nav-item[b-x8c1fjb3wv]  a {
-        color: #d7d7d7;
-        border-radius: 4px;
-        height: 3rem;
-        display: flex;
-        align-items: center;
-        line-height: 3rem;
-    }
-
-        .nav-item[b-x8c1fjb3wv]  a.active {
-            background-color: rgba(255,255,255,0.37);
-            color: white;
-        }
-
-        .nav-item[b-x8c1fjb3wv]  a:hover {
-            background-color: rgba(255,255,255,0.1);
-            color: white;
-        }
-
-.nav-scrollable[b-x8c1fjb3wv] {
-    display: none;
+nav .nav-link span[b-x8c1fjb3wv] {
+    margin-right: 0.5rem; /* Space between icon and text */
 }
 
-.navbar-toggler:checked ~ .nav-scrollable[b-x8c1fjb3wv] {
-    display: block;
+nav .btn-link[b-x8c1fjb3wv] {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    color: #333;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
-@media (min-width: 641px) {
-    .navbar-toggler[b-x8c1fjb3wv] {
-        display: none;
-    }
+nav .btn-link:hover[b-x8c1fjb3wv] {
+    background-color: #e9ecef;
+    color: #007bff;
+}
 
-    .nav-scrollable[b-x8c1fjb3wv] {
-        /* Never collapse the sidebar for wide screens */
-        display: block;
-        /* Allow sidebar to scroll for tall menus */
-        height: calc(100vh - 3.5rem);
-        overflow-y: auto;
-    }
+nav .btn-link span[b-x8c1fjb3wv] {
+    margin-right: 0.5rem;
+}
+
+.oi[b-x8c1fjb3wv] {
+    font-size: 1.2em; /*adjust icon size*/
 }

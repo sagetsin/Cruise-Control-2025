@@ -1,22 +1,14 @@
 ﻿@inherits LayoutComponentBase
 @inject AccountStorage AccountStorage
 @inject NavigationManager NavigationManager
+@inject IJSRuntime JSRuntime
 
 <div class="page">
-    @* <div class="sidebar">
-        <NavMenu />
-    </div> *@
-
     <main>
         <div class="top-row px-4">
             <button class="btn btn-primary" @onclick="NavigateToDashboard">Dashboard</button>
-            @if (!string.IsNullOrEmpty(loggedInUsername))
-            {
-                <button class="btn btn-primary" @onclick="NavigateToSignIn">Sign Out</button>
-                NavigateToDashboard();
-            }else{
-                <button class="btn btn-primary" @onclick="NavigateToSignIn">Sign In</button>
-            }
+            <button class="btn btn-primary" @onclick="NavigateToSignIn">Sign In/Out</button>
+            <button class="btn btn-primary" @onclick="NavigateToProfile">Profile</button>
             <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
         </div>
 
@@ -28,20 +20,39 @@
 
 @code {
     private string loggedInUsername;
+    private bool sidebarVisible = false;
 
     protected override void OnInitialized()
     {
+        sidebarVisible = false;
         loggedInUsername = AccountStorage.GetCurrentLoggedInUsername();
     }
 
     private void NavigateToDashboard()
     {
-        NavigationManager.NavigateTo("/dashboard"); // Replace "/dashboard" with your dashboard route
+        NavigationManager.NavigateTo("/dashboard"); 
     }
 
     private void NavigateToSignIn()
     {
         AccountStorage.RemoveLoggedInUsername();
-        NavigationManager.NavigateTo("/"); // Replace "/dashboard" with your dashboard route
+        NavigationManager.NavigateTo("/"); 
+    }
+
+    private void NavigateToProfile()
+    {
+        NavigationManager.NavigateTo("/profile"); 
+    }
+
+    private void ToggleSidebar()
+    {
+        sidebarVisible = !sidebarVisible;
+    }
+    private void SignOut()
+    {
+        AccountStorage.RemoveLoggedInUsername();
+        loggedInUsername = null;
+        StateHasChanged();
+        NavigationManager.NavigateTo("/");
     }
 }
