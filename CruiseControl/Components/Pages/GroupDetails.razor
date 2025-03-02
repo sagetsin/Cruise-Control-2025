@@ -2,6 +2,8 @@
 @inject GroupStorage GroupStorage
 @inject NavigationManager NavigationManager
 @inject AccountStorage AccountStorage
+@inject IJSRuntime JSRuntime
+
 
 
 <h3>Group Details: @group?.GroupName</h3>
@@ -14,6 +16,12 @@ else
 {
     <h4>Group Code:</h4>
     <p>@group.GroupCode</p>
+    <button class="btn btn-outline-primary" @onclick="CopyToClipboard">Copy Code</button>
+
+        @if (!string.IsNullOrEmpty(copyMessage))
+        {
+            <p>@copyMessage</p>
+        }
     <h4>Members:</h4>
     <ul>
         @foreach (var member in group.Members)
@@ -36,12 +44,26 @@ else
     private GroupStorage.Group group;
     private string groupName;
      private string loggedInUsername;
+     private string copyMessage;
 
     protected override void OnInitialized()
     {
         groupName = GroupName;
         group = GroupStorage.GetGroup(GroupName);
         loggedInUsername = AccountStorage.GetCurrentLoggedInUsername();
+    }
+
+    private async Task CopyToClipboard()
+    {
+        try
+        {
+            await JSRuntime.InvokeVoidAsync("navigator.clipboard.writeText", group.GroupCode);
+            copyMessage = "Group code copied to clipboard!";
+        }
+        catch (Exception ex)
+        {
+            copyMessage = $"Failed to copy: {ex.Message}";
+        }
     }
     private void LeaveGroup()
     {

@@ -2,6 +2,7 @@
 @inject NavigationManager NavigationManager
 @inject AccountStorage AccountStorage
 @inject GroupStorage GroupStorage
+@inject IJSRuntime JSRuntime
 
 <h3>Create Group</h3>
 
@@ -27,6 +28,12 @@ else
     @if (!string.IsNullOrEmpty(groupCode))
     {
         <p>Group Code: @groupCode</p>
+        <button class="btn btn-outline-primary" @onclick="CopyToClipboard">Copy Code</button>
+
+        @if (!string.IsNullOrEmpty(copyMessage))
+        {
+            <p>@copyMessage</p>
+        }
     }
 }
 
@@ -35,6 +42,7 @@ else
     private string createGroupMessage;
     private string loggedInUsername;
     private string groupCode;
+    private string copyMessage;
 
 
     protected override void OnInitialized()
@@ -58,6 +66,19 @@ else
         else
         {
             createGroupMessage = "Please enter a group name.";
+        }
+    }
+
+    private async Task CopyToClipboard()
+    {
+        try
+        {
+            await JSRuntime.InvokeVoidAsync("navigator.clipboard.writeText", groupCode);
+            copyMessage = "Group code copied to clipboard!";
+        }
+        catch (Exception ex)
+        {
+            copyMessage = $"Failed to copy: {ex.Message}";
         }
     }
 
