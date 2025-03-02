@@ -1,20 +1,60 @@
 // AccountStorage.cs (C#)
 
+using System.Security.Cryptography;
+using System.Text;
 using System.IO;
 using System.Text.Json;
 using System.Collections.Generic;
-using System.Security.Cryptography;
-using System.Text;
 
 namespace CruiseControl
 {
     public class AccountStorage
     {
         private string filePath;
+        private string loggedInUsernameFilePath;
 
-        public AccountStorage(string filePath)
+        public AccountStorage(string filePath, string loggedInUsernameFilePath)
         {
             this.filePath = filePath;
+            this.loggedInUsernameFilePath = loggedInUsernameFilePath;
+        }
+
+        public string GetCurrentLoggedInUsername()
+        {
+            if (File.Exists(loggedInUsernameFilePath))
+            {
+                try
+                {
+                    string jsonString = File.ReadAllText(loggedInUsernameFilePath);
+                    var loggedInUser = JsonSerializer.Deserialize<LoggedInUser>(jsonString);
+                    return loggedInUser?.Username;
+                }
+                catch (JsonException)
+                {
+                    return null;
+                }
+            }
+            return null;
+        }
+
+        public void SetLoggedInUsername(string username)
+        {
+            var loggedInUser = new LoggedInUser { Username = username };
+            string jsonString = JsonSerializer.Serialize(loggedInUser);
+            File.WriteAllText(loggedInUsernameFilePath, jsonString);
+        }
+
+        public void RemoveLoggedInUsername()
+        {
+            if (File.Exists(loggedInUsernameFilePath))
+            {
+                File.Delete(loggedInUsernameFilePath);
+            }
+        }
+
+        public class LoggedInUser
+        {
+            public string Username { get; set; }
         }
 
         public void StoreAccount(string username, string password)
