@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yIL9tJqM2gB9cEwCN2FbRconCFhZWjDcP4emqMXNjQA=",
+  "Hash": "FmO5xq08m4xpekfHRN3sR8b3d//Y35AoR1mFq/cU/Yg=",
   "Source": "CruiseControl",
   "BasePath": "/",
   "Mode": "Root",
@@ -38,12 +38,12 @@
       "OriginalItemSpec": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\compressed\\9afknvyhkp-vc8ydicsic.gz",
+      "Identity": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\compressed\\9afknvyhkp-zifog8ehwq.gz",
       "SourceId": "CruiseControl",
       "SourceType": "Computed",
       "ContentRoot": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\compressed\\",
       "BasePath": "/",
-      "RelativePath": "CruiseControl#[.{fingerprint=vc8ydicsic}]?.styles.css.gz",
+      "RelativePath": "CruiseControl#[.{fingerprint=zifog8ehwq}]?.styles.css.gz",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Alternative",
@@ -52,19 +52,19 @@
       "RelatedAsset": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\scopedcss\\bundle\\CruiseControl.styles.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "uwooefq2av",
-      "Integrity": "Hh7yAeaVihQkVufhRiakEJox2etLF3hXSbWyGyos6CY=",
+      "Fingerprint": "37aq08vkxo",
+      "Integrity": "4TnnKM8oTyH9LfvxPvkF9ars5WST3Ny24cwB3jEvgMg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\scopedcss\\bundle\\CruiseControl.styles.css"
     },
     {
-      "Identity": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\compressed\\atsphhwbyz-vc8ydicsic.gz",
+      "Identity": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\compressed\\atsphhwbyz-zifog8ehwq.gz",
       "SourceId": "CruiseControl",
       "SourceType": "Computed",
       "ContentRoot": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\compressed\\",
       "BasePath": "/",
-      "RelativePath": "CruiseControl#[.{fingerprint=vc8ydicsic}]!.bundle.scp.css.gz",
+      "RelativePath": "CruiseControl#[.{fingerprint=zifog8ehwq}]!.bundle.scp.css.gz",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Alternative",
@@ -73,8 +73,8 @@
       "RelatedAsset": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\scopedcss\\projectbundle\\CruiseControl.bundle.scp.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "uwooefq2av",
-      "Integrity": "Hh7yAeaVihQkVufhRiakEJox2etLF3hXSbWyGyos6CY=",
+      "Fingerprint": "37aq08vkxo",
+      "Integrity": "4TnnKM8oTyH9LfvxPvkF9ars5WST3Ny24cwB3jEvgMg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\scopedcss\\projectbundle\\CruiseControl.bundle.scp.css"
@@ -157,8 +157,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "vc8ydicsic",
-      "Integrity": "z9MqH6F2Kjp26C2ghKH1E/PqWaAkWFWjUBi9beAOTpE=",
+      "Fingerprint": "zifog8ehwq",
+      "Integrity": "m7QtIc74S8o9gXurS6nNtBoXjvLH8FAFUdDyld8gU0s=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\scopedcss\\bundle\\CruiseControl.styles.css"
@@ -178,8 +178,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "vc8ydicsic",
-      "Integrity": "z9MqH6F2Kjp26C2ghKH1E/PqWaAkWFWjUBi9beAOTpE=",
+      "Fingerprint": "zifog8ehwq",
+      "Integrity": "m7QtIc74S8o9gXurS6nNtBoXjvLH8FAFUdDyld8gU0s=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\scopedcss\\projectbundle\\CruiseControl.bundle.scp.css"
@@ -272,12 +272,12 @@
   "Endpoints": [
     {
       "Route": "CruiseControl.bundle.scp.css",
-      "AssetFile": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\compressed\\atsphhwbyz-vc8ydicsic.gz",
+      "AssetFile": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\compressed\\atsphhwbyz-zifog8ehwq.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000613496933"
+          "Quality": "0.000672043011"
         }
       ],
       "ResponseHeaders": [
@@ -287,15 +287,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1629"
+          "Value": "1487"
         },
         {
           "Name": "ETag",
-          "Value": "\"Hh7yAeaVihQkVufhRiakEJox2etLF3hXSbWyGyos6CY=\""
+          "Value": "\"4TnnKM8oTyH9LfvxPvkF9ars5WST3Ny24cwB3jEvgMg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 01 Mar 2025 19:54:47 GMT"
+          "Value": "Sun, 02 Mar 2025 11:20:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -315,13 +315,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"z9MqH6F2Kjp26C2ghKH1E/PqWaAkWFWjUBi9beAOTpE=\""
+          "Value": "W/\"m7QtIc74S8o9gXurS6nNtBoXjvLH8FAFUdDyld8gU0s=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-z9MqH6F2Kjp26C2ghKH1E/PqWaAkWFWjUBi9beAOTpE="
+          "Value": "sha256-m7QtIc74S8o9gXurS6nNtBoXjvLH8FAFUdDyld8gU0s="
         }
       ]
     },
@@ -336,7 +336,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5481"
+          "Value": "5393"
         },
         {
           "Name": "Content-Type",
@@ -344,11 +344,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"z9MqH6F2Kjp26C2ghKH1E/PqWaAkWFWjUBi9beAOTpE=\""
+          "Value": "\"m7QtIc74S8o9gXurS6nNtBoXjvLH8FAFUdDyld8gU0s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 01 Mar 2025 19:54:47 GMT"
+          "Value": "Sun, 02 Mar 2025 11:20:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -358,13 +358,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-z9MqH6F2Kjp26C2ghKH1E/PqWaAkWFWjUBi9beAOTpE="
+          "Value": "sha256-m7QtIc74S8o9gXurS6nNtBoXjvLH8FAFUdDyld8gU0s="
         }
       ]
     },
     {
       "Route": "CruiseControl.bundle.scp.css.gz",
-      "AssetFile": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\compressed\\atsphhwbyz-vc8ydicsic.gz",
+      "AssetFile": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\compressed\\atsphhwbyz-zifog8ehwq.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -373,7 +373,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1629"
+          "Value": "1487"
         },
         {
           "Name": "Content-Type",
@@ -381,11 +381,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Hh7yAeaVihQkVufhRiakEJox2etLF3hXSbWyGyos6CY=\""
+          "Value": "\"4TnnKM8oTyH9LfvxPvkF9ars5WST3Ny24cwB3jEvgMg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 01 Mar 2025 19:54:47 GMT"
+          "Value": "Sun, 02 Mar 2025 11:20:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -403,18 +403,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Hh7yAeaVihQkVufhRiakEJox2etLF3hXSbWyGyos6CY="
+          "Value": "sha256-4TnnKM8oTyH9LfvxPvkF9ars5WST3Ny24cwB3jEvgMg="
         }
       ]
     },
     {
       "Route": "CruiseControl.styles.css",
-      "AssetFile": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\compressed\\9afknvyhkp-vc8ydicsic.gz",
+      "AssetFile": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\compressed\\9afknvyhkp-zifog8ehwq.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000613496933"
+          "Quality": "0.000672043011"
         }
       ],
       "ResponseHeaders": [
@@ -424,15 +424,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1629"
+          "Value": "1487"
         },
         {
           "Name": "ETag",
-          "Value": "\"Hh7yAeaVihQkVufhRiakEJox2etLF3hXSbWyGyos6CY=\""
+          "Value": "\"4TnnKM8oTyH9LfvxPvkF9ars5WST3Ny24cwB3jEvgMg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 01 Mar 2025 19:54:47 GMT"
+          "Value": "Sun, 02 Mar 2025 11:20:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -452,13 +452,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"z9MqH6F2Kjp26C2ghKH1E/PqWaAkWFWjUBi9beAOTpE=\""
+          "Value": "W/\"m7QtIc74S8o9gXurS6nNtBoXjvLH8FAFUdDyld8gU0s=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-z9MqH6F2Kjp26C2ghKH1E/PqWaAkWFWjUBi9beAOTpE="
+          "Value": "sha256-m7QtIc74S8o9gXurS6nNtBoXjvLH8FAFUdDyld8gU0s="
         }
       ]
     },
@@ -473,7 +473,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5481"
+          "Value": "5393"
         },
         {
           "Name": "Content-Type",
@@ -481,11 +481,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"z9MqH6F2Kjp26C2ghKH1E/PqWaAkWFWjUBi9beAOTpE=\""
+          "Value": "\"m7QtIc74S8o9gXurS6nNtBoXjvLH8FAFUdDyld8gU0s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 01 Mar 2025 19:54:47 GMT"
+          "Value": "Sun, 02 Mar 2025 11:20:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -495,13 +495,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-z9MqH6F2Kjp26C2ghKH1E/PqWaAkWFWjUBi9beAOTpE="
+          "Value": "sha256-m7QtIc74S8o9gXurS6nNtBoXjvLH8FAFUdDyld8gU0s="
         }
       ]
     },
     {
       "Route": "CruiseControl.styles.css.gz",
-      "AssetFile": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\compressed\\9afknvyhkp-vc8ydicsic.gz",
+      "AssetFile": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\compressed\\9afknvyhkp-zifog8ehwq.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -510,7 +510,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1629"
+          "Value": "1487"
         },
         {
           "Name": "Content-Type",
@@ -518,11 +518,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Hh7yAeaVihQkVufhRiakEJox2etLF3hXSbWyGyos6CY=\""
+          "Value": "\"4TnnKM8oTyH9LfvxPvkF9ars5WST3Ny24cwB3jEvgMg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 01 Mar 2025 19:54:47 GMT"
+          "Value": "Sun, 02 Mar 2025 11:20:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -540,18 +540,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Hh7yAeaVihQkVufhRiakEJox2etLF3hXSbWyGyos6CY="
+          "Value": "sha256-4TnnKM8oTyH9LfvxPvkF9ars5WST3Ny24cwB3jEvgMg="
         }
       ]
     },
     {
-      "Route": "CruiseControl.vc8ydicsic.bundle.scp.css",
-      "AssetFile": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\compressed\\atsphhwbyz-vc8ydicsic.gz",
+      "Route": "CruiseControl.zifog8ehwq.bundle.scp.css",
+      "AssetFile": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\compressed\\atsphhwbyz-zifog8ehwq.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000613496933"
+          "Quality": "0.000672043011"
         }
       ],
       "ResponseHeaders": [
@@ -561,15 +561,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1629"
+          "Value": "1487"
         },
         {
           "Name": "ETag",
-          "Value": "\"Hh7yAeaVihQkVufhRiakEJox2etLF3hXSbWyGyos6CY=\""
+          "Value": "\"4TnnKM8oTyH9LfvxPvkF9ars5WST3Ny24cwB3jEvgMg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 01 Mar 2025 19:54:47 GMT"
+          "Value": "Sun, 02 Mar 2025 11:20:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -589,13 +589,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"z9MqH6F2Kjp26C2ghKH1E/PqWaAkWFWjUBi9beAOTpE=\""
+          "Value": "W/\"m7QtIc74S8o9gXurS6nNtBoXjvLH8FAFUdDyld8gU0s=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vc8ydicsic"
+          "Value": "zifog8ehwq"
         },
         {
           "Name": "label",
@@ -603,12 +603,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-z9MqH6F2Kjp26C2ghKH1E/PqWaAkWFWjUBi9beAOTpE="
+          "Value": "sha256-m7QtIc74S8o9gXurS6nNtBoXjvLH8FAFUdDyld8gU0s="
         }
       ]
     },
     {
-      "Route": "CruiseControl.vc8ydicsic.bundle.scp.css",
+      "Route": "CruiseControl.zifog8ehwq.bundle.scp.css",
       "AssetFile": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\scopedcss\\projectbundle\\CruiseControl.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -618,7 +618,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5481"
+          "Value": "5393"
         },
         {
           "Name": "Content-Type",
@@ -626,11 +626,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"z9MqH6F2Kjp26C2ghKH1E/PqWaAkWFWjUBi9beAOTpE=\""
+          "Value": "\"m7QtIc74S8o9gXurS6nNtBoXjvLH8FAFUdDyld8gU0s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 01 Mar 2025 19:54:47 GMT"
+          "Value": "Sun, 02 Mar 2025 11:20:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -640,7 +640,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vc8ydicsic"
+          "Value": "zifog8ehwq"
         },
         {
           "Name": "label",
@@ -648,13 +648,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-z9MqH6F2Kjp26C2ghKH1E/PqWaAkWFWjUBi9beAOTpE="
+          "Value": "sha256-m7QtIc74S8o9gXurS6nNtBoXjvLH8FAFUdDyld8gU0s="
         }
       ]
     },
     {
-      "Route": "CruiseControl.vc8ydicsic.bundle.scp.css.gz",
-      "AssetFile": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\compressed\\atsphhwbyz-vc8ydicsic.gz",
+      "Route": "CruiseControl.zifog8ehwq.bundle.scp.css.gz",
+      "AssetFile": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\compressed\\atsphhwbyz-zifog8ehwq.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -663,7 +663,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1629"
+          "Value": "1487"
         },
         {
           "Name": "Content-Type",
@@ -671,11 +671,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Hh7yAeaVihQkVufhRiakEJox2etLF3hXSbWyGyos6CY=\""
+          "Value": "\"4TnnKM8oTyH9LfvxPvkF9ars5WST3Ny24cwB3jEvgMg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 01 Mar 2025 19:54:47 GMT"
+          "Value": "Sun, 02 Mar 2025 11:20:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -693,7 +693,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vc8ydicsic"
+          "Value": "zifog8ehwq"
         },
         {
           "Name": "label",
@@ -701,18 +701,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Hh7yAeaVihQkVufhRiakEJox2etLF3hXSbWyGyos6CY="
+          "Value": "sha256-4TnnKM8oTyH9LfvxPvkF9ars5WST3Ny24cwB3jEvgMg="
         }
       ]
     },
     {
-      "Route": "CruiseControl.vc8ydicsic.styles.css",
-      "AssetFile": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\compressed\\9afknvyhkp-vc8ydicsic.gz",
+      "Route": "CruiseControl.zifog8ehwq.styles.css",
+      "AssetFile": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\compressed\\9afknvyhkp-zifog8ehwq.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000613496933"
+          "Quality": "0.000672043011"
         }
       ],
       "ResponseHeaders": [
@@ -722,15 +722,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1629"
+          "Value": "1487"
         },
         {
           "Name": "ETag",
-          "Value": "\"Hh7yAeaVihQkVufhRiakEJox2etLF3hXSbWyGyos6CY=\""
+          "Value": "\"4TnnKM8oTyH9LfvxPvkF9ars5WST3Ny24cwB3jEvgMg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 01 Mar 2025 19:54:47 GMT"
+          "Value": "Sun, 02 Mar 2025 11:20:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -750,13 +750,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"z9MqH6F2Kjp26C2ghKH1E/PqWaAkWFWjUBi9beAOTpE=\""
+          "Value": "W/\"m7QtIc74S8o9gXurS6nNtBoXjvLH8FAFUdDyld8gU0s=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vc8ydicsic"
+          "Value": "zifog8ehwq"
         },
         {
           "Name": "label",
@@ -764,12 +764,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-z9MqH6F2Kjp26C2ghKH1E/PqWaAkWFWjUBi9beAOTpE="
+          "Value": "sha256-m7QtIc74S8o9gXurS6nNtBoXjvLH8FAFUdDyld8gU0s="
         }
       ]
     },
     {
-      "Route": "CruiseControl.vc8ydicsic.styles.css",
+      "Route": "CruiseControl.zifog8ehwq.styles.css",
       "AssetFile": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\scopedcss\\bundle\\CruiseControl.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -779,7 +779,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5481"
+          "Value": "5393"
         },
         {
           "Name": "Content-Type",
@@ -787,11 +787,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"z9MqH6F2Kjp26C2ghKH1E/PqWaAkWFWjUBi9beAOTpE=\""
+          "Value": "\"m7QtIc74S8o9gXurS6nNtBoXjvLH8FAFUdDyld8gU0s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 01 Mar 2025 19:54:47 GMT"
+          "Value": "Sun, 02 Mar 2025 11:20:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -801,7 +801,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vc8ydicsic"
+          "Value": "zifog8ehwq"
         },
         {
           "Name": "label",
@@ -809,13 +809,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-z9MqH6F2Kjp26C2ghKH1E/PqWaAkWFWjUBi9beAOTpE="
+          "Value": "sha256-m7QtIc74S8o9gXurS6nNtBoXjvLH8FAFUdDyld8gU0s="
         }
       ]
     },
     {
-      "Route": "CruiseControl.vc8ydicsic.styles.css.gz",
-      "AssetFile": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\compressed\\9afknvyhkp-vc8ydicsic.gz",
+      "Route": "CruiseControl.zifog8ehwq.styles.css.gz",
+      "AssetFile": "D:\\PersonalProjects\\WiCHacks2025\\Cruise-Control-2025\\CruiseControl\\obj\\Debug\\net9.0-android\\compressed\\9afknvyhkp-zifog8ehwq.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -824,7 +824,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1629"
+          "Value": "1487"
         },
         {
           "Name": "Content-Type",
@@ -832,11 +832,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Hh7yAeaVihQkVufhRiakEJox2etLF3hXSbWyGyos6CY=\""
+          "Value": "\"4TnnKM8oTyH9LfvxPvkF9ars5WST3Ny24cwB3jEvgMg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 01 Mar 2025 19:54:47 GMT"
+          "Value": "Sun, 02 Mar 2025 11:20:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -854,7 +854,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vc8ydicsic"
+          "Value": "zifog8ehwq"
         },
         {
           "Name": "label",
@@ -862,7 +862,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Hh7yAeaVihQkVufhRiakEJox2etLF3hXSbWyGyos6CY="
+          "Value": "sha256-4TnnKM8oTyH9LfvxPvkF9ars5WST3Ny24cwB3jEvgMg="
         }
       ]
     },

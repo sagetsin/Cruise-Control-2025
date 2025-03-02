@@ -2,18 +2,15 @@ D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\bin\Debug\net
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\AboutAssets.txt
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\wwwroot\css\bootstrap\bootstrap.min.css.map.gz
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\wwwroot\CruiseControl.styles.css.gz
-D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\wwwroot\CruiseControl.vc8ydicsic.bundle.scp.css.gz
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\wwwroot\index.html.gz
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\wwwroot\css\bootstrap\bootstrap.min.css.gz
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\wwwroot\css\bootstrap\bootstrap.min.css.map.br
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\wwwroot\CruiseControl.styles.css.br
-D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\wwwroot\CruiseControl.vc8ydicsic.bundle.scp.css.br
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\wwwroot\index.html.br
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\wwwroot\css\bootstrap\bootstrap.min.css.br
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\wwwroot\css\app.css.br
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\wwwroot\css\app.css.gz
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\wwwroot\CruiseControl.styles.css
-D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\wwwroot\CruiseControl.vc8ydicsic.bundle.scp.css
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\wwwroot\css\app.css
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\wwwroot\css\bootstrap\bootstrap.min.css
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\wwwroot\css\bootstrap\bootstrap.min.css.map
@@ -412,8 +409,6 @@ D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\compressed\hc4gfv6bt6-6gzpyzhau4.gz
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\compressed\2w695ibjdl-8inm30yfxf.gz
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\compressed\dzufy30h80-unmtucnub5.gz
-D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\compressed\9afknvyhkp-vc8ydicsic.gz
-D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\compressed\atsphhwbyz-vc8ydicsic.gz
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\staticwebassets.build.json
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\staticwebassets.development.json
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\staticwebassets.build.endpoints.json
@@ -423,8 +418,6 @@ D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\staticwebassets\msbuild.buildMultiTargeting.CruiseControl.props
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\staticwebassets\msbuild.buildTransitive.CruiseControl.props
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\staticwebassets.pack.json
-D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\compressed\publish\9afknvyhkp-vc8ydicsic.br
-D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\compressed\publish\atsphhwbyz-vc8ydicsic.br
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\compressed\publish\hc4gfv6bt6-6gzpyzhau4.br
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\compressed\publish\2w695ibjdl-8inm30yfxf.br
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\compressed\publish\dzufy30h80-unmtucnub5.br
@@ -530,3 +523,10 @@ D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\compressed\u0umcd9jax-vvqgn8w41j.gz
 D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\compressed\publish\u0umcd9jax-vvqgn8w41j.br
+D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\wwwroot\CruiseControl.zifog8ehwq.bundle.scp.css.gz
+D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\wwwroot\CruiseControl.zifog8ehwq.bundle.scp.css.br
+D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\wwwroot\CruiseControl.zifog8ehwq.bundle.scp.css
+D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\compressed\9afknvyhkp-zifog8ehwq.gz
+D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\compressed\atsphhwbyz-zifog8ehwq.gz
+D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\compressed\publish\9afknvyhkp-zifog8ehwq.br
+D:\PersonalProjects\WiCHacks2025\Cruise-Control-2025\CruiseControl\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\compressed\publish\atsphhwbyz-zifog8ehwq.br
