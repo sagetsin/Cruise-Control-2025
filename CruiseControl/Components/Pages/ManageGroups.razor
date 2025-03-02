@@ -1,0 +1,77 @@
+@page "/managegroups"
+@inject NavigationManager NavigationManager
+@inject AccountStorage AccountStorage
+@inject GroupStorage GroupStorage
+
+<h1>Manage Groups</h1>
+
+@if (string.IsNullOrEmpty(loggedInUsername))
+{
+    <p>You must be logged in to view your groups.</p>
+}
+else
+{
+    @if (userGroups == null)
+    {
+        <p>Loading...</p>
+    }
+    else if (userGroups.Count == 0)
+    {
+        <p>You are not a member of any groups.</p>
+    }
+    else
+    {
+        <ul>
+            @foreach (var group in userGroups)
+            {
+                <li>
+                    <button class="btn btn-link" @onclick="() => NavigateToGroup(group.GroupName)">@group.GroupName</button>
+                    @if (group.CreatedBy == loggedInUsername)
+                    {
+                        <button class="btn btn-danger btn-sm" @onclick="() => DeleteGroup(group.GroupName)">Delete</button>
+                    }
+                </li>
+            }
+        </ul>
+        
+    }
+    <button class="btn btn-secondary" @onclick="NavigateToCreateGroup">Create Group</button>
+    <button class="btn btn-secondary" @onclick="NavigateToJoinGroup">Join A Group</button>
+
+}
+
+
+@code {
+
+    private string loggedInUsername;
+    private List<GroupStorage.Group> userGroups;
+
+    protected override void OnInitialized()
+    {
+        loggedInUsername = AccountStorage.GetCurrentLoggedInUsername();
+        if (loggedInUsername != null)
+        {
+            userGroups = GroupStorage.GetGroupsForUser(loggedInUsername);
+        }
+    }
+
+    private void NavigateToGroup(string groupName)
+    {
+        NavigationManager.NavigateTo($"/group/{groupName}"); // Navigate to group details page
+    }
+
+    private void DeleteGroup(string groupName)
+    {
+        GroupStorage.DeleteGroup(groupName, loggedInUsername);
+        userGroups = GroupStorage.GetGroupsForUser(loggedInUsername); // Refresh the list
+    }
+
+    private void NavigateToCreateGroup()
+    {
+        NavigationManager.NavigateTo("/creategroup");
+    }
+    private void NavigateToJoinGroup()
+    {
+        NavigationManager.NavigateTo("/joingroup");
+    }
+}

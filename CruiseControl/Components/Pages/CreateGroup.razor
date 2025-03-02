@@ -18,10 +18,15 @@ else
     </div>
 
     <button class="btn btn-primary" @onclick="CreateNewGroup">Create Group</button>
+    <button class="btn btn-secondary" @onclick="NavigateToManageGroups">Manage Groups</button>
 
     @if (!string.IsNullOrEmpty(createGroupMessage))
     {
         <p>@createGroupMessage</p>
+    }
+    @if (!string.IsNullOrEmpty(groupCode))
+    {
+        <p>Group Code: @groupCode</p>
     }
 }
 
@@ -29,6 +34,7 @@ else
     private string groupName;
     private string createGroupMessage;
     private string loggedInUsername;
+    private string groupCode;
 
 
     protected override void OnInitialized()
@@ -44,16 +50,10 @@ else
     {
         if (!string.IsNullOrEmpty(groupName))
         {
-            try
-            {
-                GroupStorage.CreateGroup(groupName, loggedInUsername);
-                createGroupMessage = "Group created successfully!";
-                groupName = "";
-            }
-            catch (Exception ex)
-            {
-                createGroupMessage = $"Error creating group: {ex.Message}";
-            }
+            var result = GroupStorage.CreateGroup(groupName, loggedInUsername);
+            createGroupMessage = result.message;
+            groupCode = result.groupCode;
+            groupName = "";
         }
         else
         {
@@ -64,5 +64,9 @@ else
     private void NavigateToSignIn()
     {
         NavigationManager.NavigateTo("/");
+    }
+    private void NavigateToManageGroups()
+    {
+        NavigationManager.NavigateTo("/managegroups");
     }
 }

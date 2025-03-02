@@ -1,0 +1,56 @@
+@page "/group/{GroupName}"
+@inject GroupStorage GroupStorage
+@inject NavigationManager NavigationManager
+@inject AccountStorage AccountStorage
+
+
+<h3>Group Details: @group?.GroupName</h3>
+
+@if (group == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <h4>Group Code:</h4>
+    <p>@group.GroupCode</p>
+    <h4>Members:</h4>
+    <ul>
+        @foreach (var member in group.Members)
+        {
+            <li>@member</li>
+        }
+    </ul>
+    @if (loggedInUsername != null && group.Members.Contains(loggedInUsername))
+    {
+        <button class="btn btn-danger" @onclick="LeaveGroup">Leave Group</button>
+    }
+}
+
+<button class="btn btn-secondary" @onclick="NavigateToManageGroups">Back</button>
+
+@code {
+    [Parameter]
+    public string GroupName { get; set; }
+
+    private GroupStorage.Group group;
+    private string groupName;
+     private string loggedInUsername;
+
+    protected override void OnInitialized()
+    {
+        groupName = GroupName;
+        group = GroupStorage.GetGroup(GroupName);
+        loggedInUsername = AccountStorage.GetCurrentLoggedInUsername();
+    }
+    private void LeaveGroup()
+    {
+        GroupStorage.LeaveGroup(GroupName, loggedInUsername);
+        NavigationManager.NavigateTo("/managegroups"); // Navigate back to user groups
+    }
+
+    private void NavigateToManageGroups()
+    {
+        NavigationManager.NavigateTo("/managegroups");
+    }
+}

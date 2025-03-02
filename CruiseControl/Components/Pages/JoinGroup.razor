@@ -1,0 +1,57 @@
+@page "/joingroup"
+@inject AccountStorage AccountStorage
+@inject GroupStorage GroupStorage
+@inject NavigationManager NavigationManager
+
+
+<h3>Join Group</h3>
+
+@if (string.IsNullOrEmpty(loggedInUsername))
+{
+    <p>You must be logged in to join a group.</p>
+}
+else
+{
+    <div class="form-group">
+        <label>Group Code:</label>
+        <input type="text" class="form-control" @bind="groupCode" />
+    </div>
+
+    <button class="btn btn-primary" @onclick="JoinNewGroup">Join Group</button>
+
+    @if (!string.IsNullOrEmpty(joinGroupMessage))
+    {
+        <p>@joinGroupMessage</p>
+    }
+}
+<button class="btn btn-secondary" @onclick="NavigateToManageGroups">Back</button>
+
+
+@code {
+    private string groupCode;
+    private string joinGroupMessage;
+    private string loggedInUsername;
+
+    protected override void OnInitialized()
+    {
+        loggedInUsername = AccountStorage.GetCurrentLoggedInUsername();
+    }
+
+    private void JoinNewGroup()
+    {
+        if (!string.IsNullOrEmpty(groupCode))
+        {
+            var result = GroupStorage.JoinGroup(groupCode, loggedInUsername);
+            joinGroupMessage = result.message;
+            groupCode = "";
+        }
+        else
+        {
+            joinGroupMessage = "Please enter a group code.";
+        }
+    }
+    private void NavigateToManageGroups()
+    {
+        NavigationManager.NavigateTo("/managegroups");
+    }
+}

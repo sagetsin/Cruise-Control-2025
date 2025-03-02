@@ -1,4 +1,6 @@
 ﻿@inherits LayoutComponentBase
+@inject AccountStorage AccountStorage
+@inject NavigationManager NavigationManager
 
 <div class="page">
     @* <div class="sidebar">
@@ -7,6 +9,14 @@
 
     <main>
         <div class="top-row px-4">
+            <button class="btn btn-primary" @onclick="NavigateToDashboard">Dashboard</button>
+            @if (!string.IsNullOrEmpty(loggedInUsername))
+            {
+                <button class="btn btn-primary" @onclick="NavigateToSignIn">Sign Out</button>
+                NavigateToDashboard();
+            }else{
+                <button class="btn btn-primary" @onclick="NavigateToSignIn">Sign In</button>
+            }
             <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
         </div>
 
@@ -15,3 +25,23 @@
         </article>
     </main>
 </div>
+
+@code {
+    private string loggedInUsername;
+
+    protected override void OnInitialized()
+    {
+        loggedInUsername = AccountStorage.GetCurrentLoggedInUsername();
+    }
+
+    private void NavigateToDashboard()
+    {
+        NavigationManager.NavigateTo("/dashboard"); // Replace "/dashboard" with your dashboard route
+    }
+
+    private void NavigateToSignIn()
+    {
+        AccountStorage.RemoveLoggedInUsername();
+        NavigationManager.NavigateTo("/"); // Replace "/dashboard" with your dashboard route
+    }
+}
