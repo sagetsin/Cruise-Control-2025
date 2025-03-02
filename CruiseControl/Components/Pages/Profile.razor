@@ -3,15 +3,15 @@
 @inject NavigationManager NavigationManager
 @using Microsoft.AspNetCore.Components.Forms
 
-
 <h3>My Profile</h3>
 
 @if (loggedInAccount == null)
 {
-    <p>You must be logged in to view your profile.</p>
+    <p>You must be logged in to see your profile.</p>
 }
 else
 {
+    <h4>@loggedInAccount.FirstName @loggedInAccount.LastName</h4>
     <p>Username: @loggedInAccount.Username</p>
 
     @if (!string.IsNullOrEmpty(loggedInAccount.PhotoPath))
@@ -28,6 +28,35 @@ else
     @if (!string.IsNullOrEmpty(uploadMessage))
     {
         <p>@uploadMessage</p>
+    }
+    <h4>Followers:</h4>
+    @if (loggedInAccount.Followers != null)
+    {
+        <ul>
+            @foreach (var follower in loggedInAccount.Followers)
+            {
+                <li>@follower</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>No followers.</p>
+    }
+
+    <h4>Following:</h4>
+    @if (loggedInAccount.Following != null)
+    {
+        <ul>
+            @foreach (var following in loggedInAccount.Following)
+            {
+                <li>@following</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>Not following anyone.</p>
     }
 }
 
@@ -63,7 +92,7 @@ else
                 AccountStorage.UpdatePhotoPath(loggedInUsername, base64String);
                 loggedInAccount.PhotoPath = base64String; // Update the displayed photo
                 uploadMessage = "Photo uploaded successfully!";
-                StateHasChanged(); 
+                StateHasChanged(); // Force re-render to display the updated photo
             }
             else
             {
@@ -75,4 +104,5 @@ else
             uploadMessage = $"Error uploading photo: {ex.Message}";
         }
     }
+    
 }

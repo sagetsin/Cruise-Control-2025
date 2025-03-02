@@ -3,6 +3,14 @@
 @inject AccountStorage AccountStorage
 
 <h3>Create Account</h3>
+<div class="form-group">
+    <label>First Name:</label>
+    <input type="text" class="form-control" @bind="firstName" />
+</div>
+<div class="form-group">
+    <label>Last Name:</label>
+    <input type="text" class="form-control" @bind="lastName" />
+</div>
 
 <div class="form-group">
     <label>Username:</label>
@@ -26,20 +34,26 @@
 @code {
     private string username;
     private string password;
+    private string firstName;
+    private string lastName;
     private string resultMessage;
 
     private void CreateAccount()
     {
-        if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
+        if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
         {
-            AccountStorage.StoreAccount(username, password);
-            resultMessage = "Credentials stored successfully.";
-            username = "";
-            password = "";
+            resultMessage = "Please enter a username and password.";
+            return;
         }
-        else
+
+        var result = AccountStorage.StoreAccount(username, password, firstName, lastName);
+        resultMessage = result.message;
+
+        if (result.success)
         {
-            resultMessage = "Please enter both username and password.";
+            // Optionally, sign in the user after successful sign-up
+            AccountStorage.SetLoggedInUsername(username);
+            NavigationManager.NavigateTo("/dashboard");
         }
     }
 

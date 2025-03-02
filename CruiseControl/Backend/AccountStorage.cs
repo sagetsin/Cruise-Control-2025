@@ -58,15 +58,21 @@ namespace CruiseControl
             public string Username { get; set; }
         }
 
-        public void StoreAccount(string username, string password)
+        public (bool success, string message) StoreAccount(string username, string password, string firstName, string lastName)
         {
             List<Account> accounts = LoadAccounts();
 
-            string hashedPassword = HashPassword(password); // Hash the password
-            accounts.Add(new Account { Username = username, Password = hashedPassword, Points = 0 });
+            if (accounts.Any(a => a.Username == username))
+            {
+                return (false, "Username already exists.");
+            }
+
+            accounts.Add(new Account { Username = username, Password = password, PhotoPath = null, FirstName = firstName, LastName = lastName});
 
             string jsonString = JsonSerializer.Serialize(accounts);
             File.WriteAllText(filePath, jsonString);
+
+            return (true, "Account created successfully.");
         }
 
         public List<Account> LoadAccounts()
@@ -95,6 +101,11 @@ namespace CruiseControl
             public string Password { get; set; } // Store hashed password in production
             public string PhotoPath { get; set; }
             public int Points { get; set; }
+            public List<string> Followers { get; set; }
+            public List<string> Following { get; set; }
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+
         }
 
         public void UpdatePhotoPath(string username, string photoPath)
@@ -107,6 +118,50 @@ namespace CruiseControl
                 account.PhotoPath = photoPath;
                 string jsonString = JsonSerializer.Serialize(accounts);
                 File.WriteAllText(filePath, jsonString);
+            }
+        }
+        public void FollowUser(string followerUsername, string followingUsername)
+        {
+            List<Account> accounts = LoadAccounts();
+            Account follower = accounts.FirstOrDefault(a => a.Username == followerUsername);
+            Account following = accounts.FirstOrDefault(a => a.Username == followingUsername);
+
+            if (follower != null && following != null)
+            {
+                if (follower.Following == null)
+                {
+                    follower.Following = new List<string>();
+                }
+                if (following.Followers == null)
+                {
+                    following.Followers = new List<string>();
+                }
+
+                if (!follower.Following.Contains(followingUsername))
+                {
+                    follower.Following.Add(followingUsername);
+                    following.Followers.Add(followerUsername);
+                    string jsonString = JsonSerializer.Serialize(accounts);
+                    File.WriteAllText(filePath, jsonString);
+                }
+            }
+        }
+
+        public void UnfollowUser(string followerUsername, string followingUsername)
+        {
+            List<Account> accounts = LoadAccounts();
+            Account follower = accounts.FirstOrDefault(a => a.Username == followerUsername);
+            Account following = accounts.FirstOrDefault(a => a.Username == followingUsername);
+
+            if (follower != null && following != null)
+            {
+                if (follower.Following != null && follower.Following.Contains(followingUsername))
+                {
+                    follower.Following.Remove(followingUsername);
+                    following.Followers.Remove(followerUsername);
+                    string jsonString = JsonSerializer.Serialize(accounts);
+                    File.WriteAllText(filePath, jsonString);
+                }
             }
         }
 
