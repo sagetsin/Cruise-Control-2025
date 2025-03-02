@@ -5,7 +5,7 @@
 // using System.Security.Cryptography;
 // using System.Text;
 
-// namespace YourNamespace.Controllers
+// namespace CruiseControl.Controllers
 // {
 //     [ApiController]
 //     [Route("api/accounts")]

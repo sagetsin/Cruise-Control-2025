@@ -1,6 +1,7 @@
 ﻿@page "/"
+@inject NavigationManager NavigationManager
+@inject AccountStorage AccountStorage // Inject AccountStorage
 
-@page "/signin"
 
 <h3>Sign In</h3>
 
@@ -15,6 +16,7 @@
 </div>
 
 <button class="btn btn-primary" @onclick="SignIn">Sign In</button>
+<button class="btn btn-secondary" @onclick="NavigateToCreateAccount">Create Account</button>
 
 @if (!string.IsNullOrEmpty(signInMessage))
 {
@@ -28,25 +30,36 @@
 
     private void SignIn()
     {
-        // Here, you would typically perform authentication logic,
-        // such as sending the username and password to a backend API.
-        // For this example, we'll just store the values in variables.
-
         if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
         {
-            signInMessage = $"Username: {username}, Password: {password} (Stored in variables)";
+            List<AccountStorage.Account> accounts = AccountStorage.LoadAccounts(); // Load accounts
 
-            // In a real app, you would do something like:
-            // var response = await Http.PostAsJsonAsync("api/signin", new { username, password });
-            // if (response.IsSuccessStatusCode) { ... } else {...}
+            AccountStorage.Account foundAccount = accounts.FirstOrDefault(a => a.Username == username);
 
-            // You can now use the username and password variables as needed.
-            // For example, you might store them in local storage or
-            // use them to make further API requests.
+            if (foundAccount != null && foundAccount.Password == password) // Replace with password hashing!
+            {
+                signInMessage = "Sign in successful!";
+                NavigateToDashboard();
+                // Perform actions after successful ssgn-in (e.g., navigate to another page)
+            }
+            else
+            {
+                signInMessage = "Invalid username or password.";
+            }
         }
         else
         {
             signInMessage = "Please enter a username and password.";
         }
+    }
+
+    private void NavigateToCreateAccount()
+    {
+        NavigationManager.NavigateTo("/createaccount");
+    }
+
+    private void NavigateToDashboard()
+    {
+        NavigationManager.NavigateTo("/dashboard");
     }
 }

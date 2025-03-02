@@ -20,6 +20,9 @@ public static class MauiProgram
 		builder.Services.AddBlazorWebViewDeveloperTools();
 		builder.Logging.AddDebug();
 #endif
+		// Register AccountStorage as a singleton
+    	string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "accounts.json");
+    	builder.Services.AddSingleton(new CruiseControl.AccountStorage(filePath)); 
 
 		return builder.Build();
 	}
