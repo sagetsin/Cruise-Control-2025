@@ -30,16 +30,20 @@
 
     private void CreateAccount()
     {
-        if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
+        if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
         {
-            AccountStorage.StoreAccount(username, password);
-            resultMessage = "Credentials stored successfully.";
-            username = "";
-            password = "";
+            resultMessage = "Please enter a username and password.";
+            return;
         }
-        else
+
+        var result = AccountStorage.StoreAccount(username, password);
+        resultMessage = result.message;
+
+        if (result.success)
         {
-            resultMessage = "Please enter both username and password.";
+            // Optionally, sign in the user after successful sign-up
+            AccountStorage.SetLoggedInUsername(username);
+            NavigationManager.NavigateTo("/dashboard");
         }
     }
 

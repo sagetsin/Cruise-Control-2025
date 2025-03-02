@@ -1,0 +1,115 @@
+@page "/searchusers"
+@inject AccountStorage AccountStorage
+@inject NavigationManager NavigationManager
+
+<h3>Search Users</h3>
+
+<div class="form-group">
+    <label>Username:</label>
+    <input type="text" class="form-control" @bind="searchUsername" />
+</div>
+
+<button class="btn btn-primary" @onclick="Search">Search</button>
+
+@if (!string.IsNullOrEmpty(message))
+{
+    <p>@message</p>
+}
+
+@if (searchResults != null)
+{
+    @if (searchResults.Count > 0)
+    {
+        <h4>Search Results:</h4>
+        <ul>
+            @foreach (var user in searchResults)
+            {
+                <li>
+                    @user.Username
+                    @if (loggedInUsername != null && user.Username != loggedInUsername)
+                    {
+                        @if (loggedInAccount != null && loggedInAccount.Following != null && loggedInAccount.Following.Contains(user.Username))
+                        {
+                            <button class="btn btn-danger btn-sm" @onclick="() => Unfollow(user.Username)">Unfollow</button>
+                        }
+                        else
+                        {
+                            <button class="btn btn-primary btn-sm" @onclick="() => Follow(user.Username)">Follow</button>
+                        }
+                        <button class="btn btn-secondary btn-sm" @onclick="() => NavigateToProfile(user.Username)">View Profile</button>
+                    }
+                    else{
+                        <p>You must login to add other users.</p>
+                    }
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>No users found.</p>
+    }
+}
+
+@code {
+    private string searchUsername;
+    private List<AccountStorage.Account> searchResults;
+    private string message;
+    private string loggedInUsername;
+    private AccountStorage.Account loggedInAccount;
+
+    protected override void OnInitialized()
+    {
+        loggedInUsername = AccountStorage.GetCurrentLoggedInUsername();
+        if (loggedInUsername != null)
+        {
+            loggedInAccount = AccountStorage.GetAccount(loggedInUsername);
+        }
+    }
+
+    private void Search()
+    {
+        if (!string.IsNullOrEmpty(searchUsername))
+        {
+            searchResults = AccountStorage.LoadAccounts().Where(a => a.Username.Contains(searchUsername)).ToList();
+            if (searchResults.Count == 0)
+            {
+                message = "No users found.";
+            }
+            else
+            {
+                message = null;
+            }
+        }
+        else
+        {
+            message = "Please enter a username to search.";
+            searchResults = null;
+        }
+    }
+
+    private void Follow(string username)
+    {
+        if (loggedInUsername != null && username != loggedInUsername)
+        {
+            AccountStorage.FollowUser(loggedInUsername, username);
+            Search(); // Refresh search results
+            loggedInAccount = AccountStorage.GetAccount(loggedInUsername); // Refresh login
+        }
+    }
+
+    private void Unfollow(string username)
+    {
+        if (loggedInUsername != null && username != loggedInUsername)
+        {
+            AccountStorage.UnfollowUser(loggedInUsername, username);
+            Search(); // Refresh search results
+            loggedInAccount = AccountStorage.GetAccount(loggedInUsername); // Refresh login
+        }
+    }
+
+    private void NavigateToProfile(string username)
+    {
+        NavigationManager.NavigateTo($"/profile/{username}");
+    }
+}

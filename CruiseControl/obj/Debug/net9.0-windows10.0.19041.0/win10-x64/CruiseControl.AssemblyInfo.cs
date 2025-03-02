@@ -17,7 +17,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CruiseControl")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+bce3139f0051bac8413cfd5c4d87b0520f98d8e0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+0e6a91e6a88d7bfa69126ef7b58f7f145b9d0655")]
 [assembly: System.Reflection.AssemblyProductAttribute("CruiseControl")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CruiseControl")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,85 @@
+@page "/profile/{Username?}"
+@inject AccountStorage AccountStorage
+@inject NavigationManager NavigationManager
+@using Microsoft.AspNetCore.Components.Forms
+
+<h3>@profileUsername</h3>
+
+@if (profileAccount == null)
+{
+    <p>User not found.</p>
+}
+else
+{
+    <p>Username: @profileAccount.Username</p>
+
+    @if (!string.IsNullOrEmpty(profileAccount.PhotoPath))
+    {
+        <img src="@profileAccount.PhotoPath" alt="Profile Photo" style="max-width: 200px;" />
+    }
+    else
+    {
+        <p>No profile photo uploaded.</p>
+    }
+
+    @if (loggedInUsername != null)
+    {
+
+        <h4>Followers: @(profileAccount.Followers?.Count ?? 0)</h4>
+        <h4>Following: @(profileAccount.Following?.Count ?? 0)</h4>
+
+        @if (loggedInUsername != null && profileUsername != loggedInUsername)
+        {
+            @if (loggedInAccount != null && loggedInAccount.Following != null && loggedInAccount.Following.Contains(profileUsername))
+            {
+                <button class="btn btn-danger" @onclick="Unfollow">Unfollow</button>
+            }
+            else
+            {
+                <button class="btn btn-primary" @onclick="Follow">Follow</button>
+            }
+        }
+    }
+}
+
+@code {
+    private AccountStorage.Account loggedInAccount;
+    private string loggedInUsername;
+    private string uploadMessage;
+    [Parameter]
+    public string Username { get; set; }
+
+    private AccountStorage.Account profileAccount;
+    private string profileUsername;
+
+    protected override void OnInitialized()
+    {
+        loggedInUsername = AccountStorage.GetCurrentLoggedInUsername();
+        profileUsername = Username;
+        profileAccount = AccountStorage.GetAccount(profileUsername);
+        if (loggedInUsername != null)
+        {
+            loggedInAccount = AccountStorage.GetAccount(loggedInUsername);
+        }
+    }
+
+    private void Follow()
+    {
+        if (loggedInUsername != null && profileUsername != loggedInUsername)
+        {
+            AccountStorage.FollowUser(loggedInUsername, profileUsername);
+            profileAccount = AccountStorage.GetAccount(profileUsername);
+            loggedInAccount = AccountStorage.GetAccount(loggedInUsername);
+        }
+    }
+
+    private void Unfollow()
+    {
+        if (loggedInUsername != null && profileUsername != loggedInUsername)
+        {
+            AccountStorage.UnfollowUser(loggedInUsername, profileUsername);
+            profileAccount = AccountStorage.GetAccount(profileUsername);
+            loggedInAccount = AccountStorage.GetAccount(loggedInUsername);
+        }
+    }
+}

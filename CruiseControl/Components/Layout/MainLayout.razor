@@ -9,6 +9,7 @@
             <button class="btn btn-primary" @onclick="NavigateToDashboard">Dashboard</button>
             <button class="btn btn-primary" @onclick="NavigateToSignIn">Sign In/Out</button>
             <button class="btn btn-primary" @onclick="NavigateToProfile">Profile</button>
+            <button class="btn btn-primary" @onclick="NavigateToSearchUsers">Search Users</button>
             <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
         </div>
 
@@ -36,12 +37,17 @@
     private void NavigateToSignIn()
     {
         AccountStorage.RemoveLoggedInUsername();
+        loggedInUsername = "";
         NavigationManager.NavigateTo("/"); 
     }
 
     private void NavigateToProfile()
     {
-        NavigationManager.NavigateTo("/profile"); 
+        NavigationManager.NavigateTo($"/profile"); 
+    }
+    private void NavigateToSearchUsers()
+    {
+        NavigationManager.NavigateTo("/searchusers"); 
     }
 
     private void ToggleSidebar()
