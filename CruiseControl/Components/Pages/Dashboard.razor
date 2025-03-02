@@ -5,11 +5,16 @@
 
 
 <button class="btn btn-secondary" @onclick="NavigateToManageGroups">Manage Groups</button>
+<button class="btn btn-secondary" @onclick="NavigateToTimer">Timer</button>
 
 @code {
 
     private void NavigateToManageGroups()
     {
         NavigationManager.NavigateTo("/managegroups");
+    }
+    private void NavigateToTimer()
+    {
+        NavigationManager.NavigateTo("/timer");
     }
 }

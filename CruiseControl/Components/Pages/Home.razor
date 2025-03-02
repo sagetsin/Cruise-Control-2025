@@ -17,6 +17,7 @@
 
 <button class="btn btn-primary" @onclick="SignIn">Sign In</button>
 <button class="btn btn-secondary" @onclick="NavigateToCreateAccount">Create Account</button>
+<button class="btn btn-secondary" @onclick="NavigateToTimer">Timer</button>
 
 @if (!string.IsNullOrEmpty(signInMessage))
 {
@@ -56,6 +57,11 @@
     private void NavigateToCreateAccount()
     {
         NavigationManager.NavigateTo("/createaccount");
+    }
+
+    private void NavigateToTimer()
+    {
+        NavigationManager.NavigateTo("/timer");
     }
 
     private void NavigateToDashboard()

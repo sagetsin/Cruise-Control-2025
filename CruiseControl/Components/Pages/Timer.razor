@@ -1,3 +1,92 @@
 @page "/timer"
+@using System.Timers
+@inject AccountStorage AccountStorage
+@inject NavigationManager NavigationManager
 
-<h1>Counter</h1>
+<h1>Hi!</h1>
+
+
+
+<p>Elapsed Time: @FormatTime(elapsedMilliseconds)</p>
+
+@if (isRunning)
+{
+    <button class="btn btn-danger" @onclick="Stop">End Trip</button>
+}
+else
+{
+    <button class="btn btn-primary" @onclick="Start">Start Driving</button>
+}
+
+@code {
+    public System.Timers.Timer timer;
+    private bool isRunning = false;
+    private DateTime startTime;
+    private long elapsedMilliseconds = 0;
+
+    protected override void OnInitialized()
+    {
+        timer = new System.Timers.Timer(10);
+        timer.Elapsed += OnTimerElapsed;
+    }
+
+    private void Start()
+    {
+        if (!isRunning)
+        {
+            startTime = DateTime.Now;
+            timer.Start();
+            isRunning = true;
+        }
+        
+    }
+
+    private void Stop()
+    {
+        if (isRunning)
+        {
+            timer.Stop();
+            isRunning = false;
+            //elapsedMilliseconds += (long)(DateTime.Now - startTime).TotalMilliseconds;
+            elapsedMilliseconds = 0;
+        }
+    }
+    private void Reset()
+    {
+        timer.Stop();
+        elapsedMilliseconds = 0;
+        isRunning = false;
+        InvokeAsync(StateHasChanged);
+    }
+
+    private void OnTimerElapsed(object sender, System.Timers.ElapsedEventArgs e)
+    {
+        int pointDivisor = 5000;
+
+        if (isRunning)
+        {
+            elapsedMilliseconds += (long)(DateTime.Now - startTime).TotalMilliseconds;
+            startTime = DateTime.Now;
+            // add points to user every pointDivisor milliseconds
+            if (elapsedMilliseconds % pointDivisor == 0)
+            {
+                // add points to user
+
+            }
+            InvokeAsync(StateHasChanged);
+        }
+        
+    }
+
+	private string FormatTime(long elapsedMilliseconds)
+	{
+		TimeSpan timeSpan = TimeSpan.FromMilliseconds(elapsedMilliseconds);
+		return timeSpan.ToString(@"hh\:mm\:ss");
+	}
+
+    public void Dispose()
+    {
+        timer?.Dispose();
+    }
+
+}
