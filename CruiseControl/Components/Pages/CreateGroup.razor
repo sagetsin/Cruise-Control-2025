@@ -1,0 +1,68 @@
+@page "/creategroup"
+@inject NavigationManager NavigationManager
+@inject AccountStorage AccountStorage
+@inject GroupStorage GroupStorage
+
+<h3>Create Group</h3>
+
+
+@if (string.IsNullOrEmpty(loggedInUsername)){
+    <p>You must be logged in to create a group.</p>
+    <button class="btn btn-secondary" @onclick="NavigateToSignIn">Sign In</button>
+}
+else
+{
+    <div class="form-group">
+        <label>Group Name:</label>
+        <input type="text" class="form-control" @bind="groupName" />
+    </div>
+
+    <button class="btn btn-primary" @onclick="CreateNewGroup">Create Group</button>
+
+    @if (!string.IsNullOrEmpty(createGroupMessage))
+    {
+        <p>@createGroupMessage</p>
+    }
+}
+
+@code {
+    private string groupName;
+    private string createGroupMessage;
+    private string loggedInUsername;
+
+
+    protected override void OnInitialized()
+    {
+        loggedInUsername = AccountStorage.GetCurrentLoggedInUsername();
+        if (loggedInUsername == null)
+        {
+            return;
+        }
+    }
+
+    private void CreateNewGroup()
+    {
+        if (!string.IsNullOrEmpty(groupName))
+        {
+            try
+            {
+                GroupStorage.CreateGroup(groupName, loggedInUsername);
+                createGroupMessage = "Group created successfully!";
+                groupName = "";
+            }
+            catch (Exception ex)
+            {
+                createGroupMessage = $"Error creating group: {ex.Message}";
+            }
+        }
+        else
+        {
+            createGroupMessage = "Please enter a group name.";
+        }
+    }
+
+    private void NavigateToSignIn()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+}

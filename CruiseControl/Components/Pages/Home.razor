@@ -39,6 +39,7 @@
             if (foundAccount != null && AccountStorage.VerifyPassword(password, foundAccount.Password))
             {
                 signInMessage = "Sign in successful!";
+                AccountStorage.SetLoggedInUsername(username);
                 NavigateToDashboard();
             }
             else
