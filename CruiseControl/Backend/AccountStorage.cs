@@ -21,7 +21,8 @@ namespace CruiseControl
         {
             List<Account> accounts = LoadAccounts();
 
-            accounts.Add(new Account { Username = username, Password = password }); // Store hashed password in production
+            string hashedPassword = HashPassword(password); // Hash the password
+            accounts.Add(new Account { Username = username, Password = hashedPassword });
 
             string jsonString = JsonSerializer.Serialize(accounts);
             File.WriteAllText(filePath, jsonString);
@@ -53,7 +54,7 @@ namespace CruiseControl
             public string Password { get; set; } // Store hashed password in production
         }
 
-        private string HashPassword(string password)
+        public string HashPassword(string password)
         {
             using (var sha256 = SHA256.Create())
             {
@@ -62,7 +63,7 @@ namespace CruiseControl
             }
         }
 
-        private bool VerifyPassword(string enteredPassword, string storedHash)
+        public bool VerifyPassword(string enteredPassword, string storedHash)
         {
             string enteredHash = HashPassword(enteredPassword);
             return string.Equals(enteredHash, storedHash, StringComparison.OrdinalIgnoreCase);

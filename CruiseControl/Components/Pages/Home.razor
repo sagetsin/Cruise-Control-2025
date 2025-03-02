@@ -32,15 +32,14 @@
     {
         if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
         {
-            List<AccountStorage.Account> accounts = AccountStorage.LoadAccounts(); // Load accounts
+             List<AccountStorage.Account> accounts = AccountStorage.LoadAccounts();
 
             AccountStorage.Account foundAccount = accounts.FirstOrDefault(a => a.Username == username);
 
-            if (foundAccount != null && foundAccount.Password == password) // Replace with password hashing!
+            if (foundAccount != null && AccountStorage.VerifyPassword(password, foundAccount.Password))
             {
                 signInMessage = "Sign in successful!";
                 NavigateToDashboard();
-                // Perform actions after successful ssgn-in (e.g., navigate to another page)
             }
             else
             {
