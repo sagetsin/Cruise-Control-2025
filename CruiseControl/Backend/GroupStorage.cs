@@ -120,7 +120,7 @@ namespace CruiseControl
 
             if (group.CreatedBy == username)
             {
-                if (group.Members.Count >= 1)
+                if (group.Members.Count > 1)
                 {
                     // Pass ownership to the last member
                     group.CreatedBy = group.Members[1];

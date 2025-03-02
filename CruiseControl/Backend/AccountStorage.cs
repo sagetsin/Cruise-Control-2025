@@ -58,7 +58,7 @@ namespace CruiseControl
             public string Username { get; set; }
         }
 
-        public (bool success, string message) StoreAccount(string username, string password)
+        public (bool success, string message) StoreAccount(string username, string password, string firstName, string lastName)
         {
             List<Account> accounts = LoadAccounts();
 
@@ -67,7 +67,7 @@ namespace CruiseControl
                 return (false, "Username already exists.");
             }
 
-            accounts.Add(new Account { Username = username, Password = password, PhotoPath = null });
+            accounts.Add(new Account { Username = username, Password = password, PhotoPath = null, FirstName = firstName, LastName = lastName});
 
             string jsonString = JsonSerializer.Serialize(accounts);
             File.WriteAllText(filePath, jsonString);
@@ -102,6 +102,9 @@ namespace CruiseControl
             public string PhotoPath { get; set; }
             public List<string> Followers { get; set; }
             public List<string> Following { get; set; }
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+
         }
 
         public void UpdatePhotoPath(string username, string photoPath)

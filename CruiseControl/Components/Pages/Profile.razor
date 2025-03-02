@@ -11,6 +11,7 @@
 }
 else
 {
+    <h4>@loggedInAccount.FirstName @loggedInAccount.LastName</h4>
     <p>Username: @loggedInAccount.Username</p>
 
     @if (!string.IsNullOrEmpty(loggedInAccount.PhotoPath))
